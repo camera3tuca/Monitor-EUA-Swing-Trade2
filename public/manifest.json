@@ -1,0 +1,84 @@
+{
+  "name": "Wall Street Scanner Pro",
+  "short_name": "Wall Street Scanner",
+  "version": "1.0.1",
+  "description": "Real-time quantitative swing trade scanner and technical screening terminal for US equity markets (S&P 500, Nasdaq, NYSE, ETFs) by ScienceBit Computer (sciencebit.com.br)",
+  "start_url": "/",
+  "scope": "/",
+  "id": "com.wallstreetscanner.swingtrade",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "minimal-ui",
+    "browser"
+  ],
+  "orientation": "any",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "categories": [
+    "finance",
+    "business",
+    "utilities"
+  ],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Scanner de Sobrevenda e Monitor de Ativos Wall Street"
+    },
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "720x1280",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Gráfico Técnico e Análise Quantitativa"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Scanner de Sobrevenda",
+      "short_name": "Scanner",
+      "description": "Abrir o scanner de oportunidades em Wall Street",
+      "url": "/",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ]
+    }
+  ]
+}

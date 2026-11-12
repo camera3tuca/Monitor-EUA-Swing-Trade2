@@ -1,0 +1,192 @@
+import React from 'react';
+
+interface AppIconProps {
+  className?: string;
+  size?: number;
+  alt?: string;
+}
+
+/**
+ * Official Wall Street Scanner Bull Icon.
+ * Rendered natively as an inline SVG vector so it NEVER fails to load in Android WebView,
+ * WebIntoApp offline HTML packages, or low-connectivity environments (100% crash/404-proof).
+ */
+export const AppIcon: React.FC<AppIconProps> = ({
+  className = 'w-10 h-10 rounded-xl',
+  size,
+  alt = 'Wall Street Scanner'
+}) => {
+  return (
+    <div
+      role="img"
+      aria-label={alt}
+      style={size ? { width: size, height: size } : undefined}
+      className={`inline-flex items-center justify-center overflow-hidden bg-white select-none shrink-0 ${className}`}
+    >
+      <svg
+        viewBox="0 0 512 512"
+        className="w-full h-full object-contain pointer-events-none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        {/* 1. Pure White Background Squircle */}
+        <rect width="512" height="512" rx="115" fill="#ffffff" />
+
+        {/* 2. Candlestick Bars in the background */}
+        <g id="candlesticks">
+          {/* Candle 1: Far Left Green (x: 68) */}
+          <line x1="72" y1="240" x2="72" y2="410" stroke="#00b050" strokeWidth="4.5" strokeLinecap="round" />
+          <rect x="54" y="270" width="36" height="110" rx="3" fill="#00b050" />
+
+          {/* Candle 2: Green (x: 112) */}
+          <line x1="112" y1="142" x2="112" y2="340" stroke="#00b050" strokeWidth="4.5" strokeLinecap="round" />
+          <rect x="94" y="172" width="36" height="168" rx="3" fill="#00b050" />
+
+          {/* Candle 3: Red (x: 152) */}
+          <line x1="152" y1="154" x2="152" y2="396" stroke="#ef4444" strokeWidth="4.5" strokeLinecap="round" />
+          <rect x="134" y="182" width="36" height="48" rx="3" fill="#ef4444" />
+
+          {/* Candle 4: Green (x: 188) */}
+          <line x1="188" y1="144" x2="188" y2="415" stroke="#00b050" strokeWidth="4.5" strokeLinecap="round" />
+          <rect x="170" y="172" width="36" height="60" rx="3" fill="#00b050" />
+
+          {/* Candle 5: Green (x: 222) */}
+          <line x1="222" y1="126" x2="222" y2="375" stroke="#00b050" strokeWidth="4.5" strokeLinecap="round" />
+          <rect x="204" y="154" width="36" height="55" rx="3" fill="#00b050" />
+
+          {/* Candle 6: Red (x: 258) */}
+          <line x1="258" y1="88" x2="258" y2="200" stroke="#ef4444" strokeWidth="4.5" strokeLinecap="round" />
+          <rect x="240" y="115" width="36" height="78" rx="3" fill="#ef4444" />
+
+          {/* Candle 7: Green (x: 294) */}
+          <line x1="294" y1="128" x2="294" y2="418" stroke="#00b050" strokeWidth="4.5" strokeLinecap="round" />
+          <rect x="276" y="154" width="36" height="48" rx="3" fill="#00b050" />
+
+          {/* Candle 8: Red - Tall Center (x: 330) */}
+          <line x1="330" y1="68" x2="330" y2="375" stroke="#ef4444" strokeWidth="4.5" strokeLinecap="round" />
+          <rect x="312" y="98" width="36" height="78" rx="3" fill="#ef4444" />
+
+          {/* Candle 9: Green (x: 368) */}
+          <line x1="368" y1="98" x2="368" y2="370" stroke="#00b050" strokeWidth="4.5" strokeLinecap="round" />
+          <rect x="350" y="130" width="36" height="65" rx="3" fill="#00b050" />
+
+          {/* Candle 10: Red (x: 406) */}
+          <line x1="406" y1="130" x2="406" y2="375" stroke="#ef4444" strokeWidth="4.5" strokeLinecap="round" />
+          <rect x="388" y="160" width="36" height="66" rx="3" fill="#ef4444" />
+
+          {/* Candle 11: Far Right Green (x: 448) */}
+          <line x1="448" y1="88" x2="448" y2="340" stroke="#00b050" strokeWidth="4.5" strokeLinecap="round" />
+          <rect x="430" y="120" width="36" height="114" rx="3" fill="#00b050" />
+        </g>
+
+        {/* 3. Charging Bull Silhouette with Crisp White Contour */}
+        <g id="bull">
+          {/* Path 1: White outer contour halo for perfect separation */}
+          <path
+            d="
+              M 22,246
+              C 32,225 50,215 75,212
+              C 105,210 135,232 150,235
+              C 175,240 195,228 220,210
+              C 248,190 280,172 318,172
+              C 345,172 375,188 395,212
+              C 402,220 415,224 425,224
+              C 442,224 465,230 488,238
+              C 470,248 445,252 432,246
+              C 445,258 468,272 478,286
+              C 460,286 442,276 428,266
+              C 424,272 416,290 410,314
+              C 405,326 394,330 382,324
+              C 374,318 365,302 355,294
+              C 345,286 332,286 318,296
+              C 334,312 352,338 372,364
+              C 388,382 402,402 424,416
+              L 412,422
+              C 396,416 384,396 368,374
+              C 350,350 338,328 325,322
+              C 318,338 305,358 292,374
+              C 284,386 274,394 260,392
+              L 255,385
+              C 268,368 280,350 286,334
+              C 268,342 244,350 220,344
+              C 198,338 185,325 174,312
+              C 170,332 165,355 160,378
+              L 172,394
+              L 155,394
+              C 146,374 142,348 138,322
+              C 128,336 118,362 108,388
+              L 120,395
+              L 102,395
+              C 92,370 96,334 106,298
+              C 112,274 108,256 88,252
+              C 68,248 45,248 28,255
+              Z
+            "
+            fill="#ffffff"
+            stroke="#ffffff"
+            strokeWidth="12"
+            strokeLinejoin="round"
+            strokeLinecap="round"
+          />
+
+          {/* Path 2: Solid Jet Black Bull Body */}
+          <path
+            d="
+              M 22,246
+              C 32,225 50,215 75,212
+              C 105,210 135,232 150,235
+              C 175,240 195,228 220,210
+              C 248,190 280,172 318,172
+              C 345,172 375,188 395,212
+              C 402,220 415,224 425,224
+              C 442,224 465,230 488,238
+              C 470,248 445,252 432,246
+              C 445,258 468,272 478,286
+              C 460,286 442,276 428,266
+              C 424,272 416,290 410,314
+              C 405,326 394,330 382,324
+              C 374,318 365,302 355,294
+              C 345,286 332,286 318,296
+              C 334,312 352,338 372,364
+              C 388,382 402,402 424,416
+              L 412,422
+              C 396,416 384,396 368,374
+              C 350,350 338,328 325,322
+              C 318,338 305,358 292,374
+              C 284,386 274,394 260,392
+              L 255,385
+              C 268,368 280,350 286,334
+              C 268,342 244,350 220,344
+              C 198,338 185,325 174,312
+              C 170,332 165,355 160,378
+              L 172,394
+              L 155,394
+              C 146,374 142,348 138,322
+              C 128,336 118,362 108,388
+              L 120,395
+              L 102,395
+              C 92,370 96,334 106,298
+              C 112,274 108,256 88,252
+              C 68,248 45,248 28,255
+              Z
+            "
+            fill="#0c1017"
+          />
+
+          {/* Bull Eye Detail */}
+          <path
+            d="M 386,262 C 392,266 398,272 400,277 C 394,276 388,270 384,264 Z"
+            fill="#ffffff"
+          />
+
+          {/* Inner Horn White Arch */}
+          <path
+            d="M 436,236 C 454,236 470,240 482,244 C 468,248 450,248 438,244 Z"
+            fill="#ffffff"
+            opacity="0.85"
+          />
+        </g>
+      </svg>
+    </div>
+  );
+};
+

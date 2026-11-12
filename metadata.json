@@ -1,0 +1,8 @@
+{
+  "name": "Remix Monitor-EUA-Swing-Trade",
+  "description": "Imported from GitHub: camera3tuca/Monitor-EUA-Swing-Trade",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
